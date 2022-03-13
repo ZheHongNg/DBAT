@@ -29,7 +29,7 @@ VALUES ('tn07', 'Pottery', 'clay');
 INSERT INTO Technology (TechnologyID, Tools, Material)
 VALUES ('tn08', 'Adzes', 'stone');
 
---bronze age
+--metal age
 
 INSERT INTO Technology (TechnologyID, Tools, Material)
 VALUES ('tn09', 'Axes', 'metal');
