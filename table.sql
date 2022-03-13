@@ -12,14 +12,6 @@ CREATE TABLE Technology(
 	Material VARCHAR(255)
 );
 
-CREATE TABLE Human_Type(
-	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
-	Human_Type_Name VARCHAR(255),
-	Human_AreaID VARCHAR(255),
-	CONSTRAINT FK_Human_Area FOREIGN KEY (Human_AreaID)
-	REFERENCES Small_Local_Area(S_L_AreaID)
-);
-
 CREATE TABLE Local_Area (
 	L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
 	State_Name VARCHAR(255)
@@ -31,6 +23,14 @@ CREATE TABLE Small_Local_Area (
 	District_Name VARCHAR(255),
 	CONSTRAINT FK_Main_Area FOREIGN KEY (Main_AreaID)
 	REFERENCES Local_Area(L_AreaID)
+);
+
+CREATE TABLE Human_Type(
+	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
+	Human_Type_Name VARCHAR(255),
+	Human_AreaID VARCHAR(255),
+	CONSTRAINT FK_Human_Area FOREIGN KEY (Human_AreaID)
+	REFERENCES Small_Local_Area(S_L_AreaID)
 );
 
 CREATE TABLE Invented_In(
