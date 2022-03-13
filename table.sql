@@ -29,7 +29,7 @@ CREATE TABLE Human_Type(
 	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	TimeID VARCHAR(255),
 	Human_Type_Name VARCHAR(255),
-	L_AreaID VARCHAR(255)
+	S_L_AreaID VARCHAR(255)
 );
 
 CREATE TABLE Local_Area (
@@ -45,5 +45,5 @@ CREATE TABLE Small_Local_Area (
 
 CREATE TABLE Area_On_Time(
     TimeID VARCHAR(255),
-    L_AreaID VARCHAR(255)
+    S_L_AreaID VARCHAR(255)
 );
