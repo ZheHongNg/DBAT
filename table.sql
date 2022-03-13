@@ -47,3 +47,6 @@ CREATE TABLE Area_On_Time(
     TimeID VARCHAR(255),
     S_L_AreaID VARCHAR(255)
 );
+
+
+test
