@@ -63,7 +63,7 @@ CREATE TABLE Area_Has_Time(
 
 CREATE TABLE Existed_In(
 	Exist_TimeID VARCHAR(255),
-	Human_ExistID (255),
+	Human_ExistID VARCHAR(255),
 	CONSTRAINT FK_ExistTime FOREIGN KEY (Exist_TimeID)
 	REFERENCES Time_Period (TimeID),
 	CONSTRAINT FK_Human_Exist FOREIGN KEY (Human_ExistID)
