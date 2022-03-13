@@ -7,10 +7,12 @@ CREATE TABLE Time_Period(
 );
 
 CREATE TABLE Invented_In(
-    InventedTimeID VARCHAR(255),
-    TechnologyID VARCHAR(255)
-    CONSTRAINT FK_InventedTime FOREIGN KEY (Time)
-    REFERENCES Time_Period (TimeID)
+	InventedTimeID VARCHAR(255),
+	InventedTechnologyID VARCHAR(255)
+	CONSTRAINT FK_InventedTime FOREIGN KEY (InventedTimeID)
+	REFERENCES Time_Period (TimeID),
+	CONSTRAINT FK_InventedTechnologyID FOREIGN KEY (InventedTechnologyID)
+	REFERENCES Technology(TechnologyID)
 );
 
 
@@ -21,8 +23,8 @@ CREATE TABLE Technology(
 );
 
 CREATE TABLE Used_Technology(
-    TechnologyID VARCHAR(255),
-    Human_TypeID VARCHAR(255)
+	TechnologyID VARCHAR(255),
+	Human_TypeID VARCHAR(255)
 );
 
 CREATE TABLE Human_Type(
@@ -33,19 +35,19 @@ CREATE TABLE Human_Type(
 );
 
 CREATE TABLE Local_Area (
-    L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
-    State_Name VARCHAR(255)
+	L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
+	State_Name VARCHAR(255)
 );
 
 CREATE TABLE Small_Local_Area (
-    S_L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
-    L_AreaID VARCHAR(255),
-    District_Name VARCHAR(255)
+	S_L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
+	L_AreaID VARCHAR(255),
+	District_Name VARCHAR(255)
 );
 
 CREATE TABLE Area_On_Time(
-    TimeID VARCHAR(255),
-    S_L_AreaID VARCHAR(255)
+	TimeID VARCHAR(255),
+	S_L_AreaID VARCHAR(255)
 );
 
 
