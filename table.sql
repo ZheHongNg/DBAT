@@ -6,29 +6,10 @@ CREATE TABLE Time_Period(
 	YearEnd int
 );
 
-CREATE TABLE Invented_In(
-	InventedTimeID VARCHAR(255),
-	InventedTechnologyID VARCHAR(255),
-	CONSTRAINT FK_InventedTime FOREIGN KEY (InventedTimeID)
-	REFERENCES Time_Period (TimeID),
-	CONSTRAINT FK_InventedTechnology FOREIGN KEY (InventedTechnologyID)
-	REFERENCES Technology(TechnologyID)
-);
-
-
 CREATE TABLE Technology(
 	TechnologyID VARCHAR(255) PRIMARY KEY NOT NULL,
 	Tools VARCHAR(255),
 	Material VARCHAR(255)
-);
-
-CREATE TABLE Used_Technology(
-	UsedTechnologyID VARCHAR(255),
-	Human_UsedID VARCHAR(255),
-	CONSTRAINT FK_UsedTechnology FOREIGN KEY (UsedTechnologyID)
-	REFERENCES Technology(TechnologyID),
-	CONSTRAINT FK_Human_Used FOREIGN KEY (Human_UsedID)
-	REFERENCES Human_Type(Human_TypeID)
 );
 
 CREATE TABLE Human_Type(
@@ -50,6 +31,24 @@ CREATE TABLE Small_Local_Area (
 	District_Name VARCHAR(255),
 	CONSTRAINT FK_Main_Area FOREIGN KEY (Main_AreaID)
 	REFERENCES Local_Area(L_AreaID)
+);
+
+CREATE TABLE Invented_In(
+	InventedTimeID VARCHAR(255),
+	InventedTechnologyID VARCHAR(255),
+	CONSTRAINT FK_InventedTime FOREIGN KEY (InventedTimeID)
+	REFERENCES Time_Period (TimeID),
+	CONSTRAINT FK_InventedTechnology FOREIGN KEY (InventedTechnologyID)
+	REFERENCES Technology(TechnologyID)
+);
+
+CREATE TABLE Used_Technology(
+	UsedTechnologyID VARCHAR(255),
+	Human_UsedID VARCHAR(255),
+	CONSTRAINT FK_UsedTechnology FOREIGN KEY (UsedTechnologyID)
+	REFERENCES Technology(TechnologyID),
+	CONSTRAINT FK_Human_Used FOREIGN KEY (Human_UsedID)
+	REFERENCES Human_Type(Human_TypeID)
 );
 
 CREATE TABLE Area_Has_Time(
