@@ -1,8 +1,19 @@
-INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
-VALUES ('tp01', 40000, 12000);
+--paleolitik
 
 INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
-VALUES ('tp01', 12000, 2800);
+VALUES ('tp01', 40000, 35000);
+
+--mesolitik
 
 INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
-VALUES ('tp01', 2800, 500);
+VALUES ('tp02', 35000, 10000);
+
+--neolitik
+
+INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
+VALUES ('tp03', 10000, 5000);
+
+--bronze age(gangsa)
+
+INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
+VALUES ('tp04', 5000, 2500);
