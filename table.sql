@@ -3,7 +3,7 @@ CREATE DATABASE DBATDB;
 CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	YearStart int,
-	YearStart int
+	YearEnd int
 );
 
 CREATE TABLE Invented_In(
