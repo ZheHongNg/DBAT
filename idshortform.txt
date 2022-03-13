@@ -1,0 +1,9 @@
+ht = human type 
+la = local area 
+sla = small local area
+tp = time period
+tn = technology
+ex = existed
+a = area
+i = invented
+u = used
