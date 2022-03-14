@@ -4,49 +4,49 @@ INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
 VALUES ('ht01', 'Homo Erectus', 'sla01');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Erectus', 'sla02');
+VALUES ('ht02', 'Homo Erectus', 'sla02');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Erectus', 'sla03');
+VALUES ('ht03', 'Homo Erectus', 'sla03');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Erectus', 'sla04');
+VALUES ('ht04', 'Homo Erectus', 'sla04');
 
 --mesolitik
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Soloensis', 'sla05');
+VALUES ('ht05', 'Homo Soloensis', 'sla05');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Soloensis', 'sla06');
+VALUES ('ht06', 'Homo Soloensis', 'sla06');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Soloensis', 'sla07');
+VALUES ('ht07', 'Homo Soloensis', 'sla07');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Soloensis', 'sla08');
+VALUES ('ht08', 'Homo Soloensis', 'sla08');
 
 --neolitik
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht03', 'Homo Floresiensis', 'sla09');
+VALUES ('ht09', 'Homo Floresiensis', 'sla09');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht03', 'Homo Floresiensis', 'sla10');
+VALUES ('ht10', 'Homo Floresiensis', 'sla10');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht03', 'Homo Floresiensis', 'sla11');
+VALUES ('ht11', 'Homo Floresiensis', 'sla11');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht03', 'Homo Floresiensis', 'sla12');
+VALUES ('ht12', 'Homo Floresiensis', 'sla12');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht03', 'Homo Floresiensis', 'sla13');
+VALUES ('ht13', 'Homo Floresiensis', 'sla13');
 
 --logam
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Sapien', 'sla14');
+VALUES ('ht14', 'Homo Sapien', 'sla14');
 
 INSERT INTO Human_Type (Human_TypeID, Human_Type_Name, S_L_AreaID)
-VALUES ('ht01', 'Homo Sapien', 'sla15');
+VALUES ('ht15', 'Homo Sapien', 'sla15');
