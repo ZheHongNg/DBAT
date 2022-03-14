@@ -35,4 +35,4 @@ INSERT INTO Technology (TechnologyID, Tools, Material)
 VALUES ('tn09', 'Axes', 'metal');
 
 INSERT INTO Technology (TechnologyID, Tools, Material)
-VALUES ('tn09', 'Adze', 'bronze');
+VALUES ('tn10', 'Adze', 'bronze');
