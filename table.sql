@@ -3,8 +3,8 @@ CREATE DATABASE DBATDB;
 CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	PeriodName VARCHAR(255),
-	YearStart int,
-	YearEnd int
+	YearStart VARCHAR(255),
+	YearEnd VARCHAR(255)
 );
 
 CREATE TABLE Technology(
