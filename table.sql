@@ -2,6 +2,7 @@ CREATE DATABASE DBATDB;
 
 CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
+	PeriodName VARCHAR(255),
 	YearStart int,
 	YearEnd int
 );
