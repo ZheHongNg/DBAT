@@ -68,3 +68,12 @@ CREATE TABLE Existed_In(
 	CONSTRAINT FK_Human_Exist FOREIGN KEY (Human_ExistID)
 	REFERENCES Human_Type(Human_TypeID)
 );
+
+CREATE TABLE Human_live(
+	human_liveID VARCHAR(255),
+	living_placeID VARCHAR(255)
+	CONSTRAINT FK_human_live FOREIGN KEY (human_livingID)
+	REFERENCES Human_Type (Human_TypeID),
+	CONSTRAINT FK_living_place FOREIGN KEY (living_placeID)
+	REFERENCES Small_Local_Area(S_L_AreaID)
+);
