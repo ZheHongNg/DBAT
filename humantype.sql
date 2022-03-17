@@ -11,9 +11,9 @@ VALUES ('ht02', 'Homo Soloensis');
 --neolitik
 
 INSERT INTO human_type (Human_TypeID, Human_Type_Name)
-VALUES ('HT03', 'Homo Floresisensis');
+VALUES ('ht03', 'Homo Floresisensis');
 
 --logam
 
 INSERT INTO human_type (Human_TypeID, Human_Type_Name)
-VALUES ('HT04', 'Homo Sapien');
+VALUES ('ht04', 'Homo Sapien');
