@@ -13,7 +13,7 @@ VALUES ('tp02', 35000, 10000);
 INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
 VALUES ('tp03', 10000, 5000);
 
---metal age
+--iron age
 
 INSERT INTO Time_Period (TimeID, YearStart, YearEnd)
 VALUES ('tp04', 5000, 2500);
