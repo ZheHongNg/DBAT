@@ -1,4 +1,4 @@
--paleolitik
+--paleolitik
 
 INSERT INTO Human_Type (Human_TypeID, S_L_AreaID)
 VALUES ('ht01', 'sla01');
