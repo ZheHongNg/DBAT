@@ -71,7 +71,7 @@ CREATE TABLE Existed_In(
 );
 
 CREATE TABLE Human_live(
-	human_liveID VARCHAR(255),
+	human_livingID VARCHAR(255),
 	living_placeID VARCHAR(255),
 	CONSTRAINT FK_human_live FOREIGN KEY (human_livingID)
 	REFERENCES Human_Type (Human_TypeID),
