@@ -29,9 +29,9 @@ CREATE TABLE Small_Local_Area (
 CREATE TABLE Human_Type(
 	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	Human_Type_Name VARCHAR(255),
-	S_L_AreaID VARCHAR(255),
-	CONSTRAINT FK_S_L_Area FOREIGN KEY (S_L_AreaID)
-	REFERENCES Small_Local_Area(S_L_AreaID)
+	TimeID VARCHAR(255),
+	CONSTRAINT FK_Time FOREIGN KEY (TimeID)
+	REFERENCES Time_Period(TimeID)
 );
 
 CREATE TABLE Invented_In(
@@ -62,16 +62,6 @@ CREATE TABLE Area_Has_Time(
 	REFERENCES Time_Period (TimeID),
 	CONSTRAINT FK_Area_HT FOREIGN KEY (Area_HTID)
 	REFERENCES Small_Local_Area(S_L_AreaID)
-);
-
-CREATE TABLE Existed_In(
-	Exist_TimeID VARCHAR(255),
-	Human_ExistID VARCHAR(255),
-	CONSTRAINT PK_Existed_In PRIMARY KEY (Exist_TimeID,Human_ExistID),
-	CONSTRAINT FK_ExistTime FOREIGN KEY (Exist_TimeID)
-	REFERENCES Time_Period (TimeID),
-	CONSTRAINT FK_Human_Exist FOREIGN KEY (Human_ExistID)
-	REFERENCES Human_Type(Human_TypeID)
 );
 
 CREATE TABLE Human_live(
