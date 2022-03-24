@@ -84,4 +84,18 @@ CREATE TABLE Human_live(
 	REFERENCES Small_Local_Area(S_L_AreaID)
 );
 
-CREATE TABLE
+CREATE TABLE Weapon(
+	Cat_weaponID VARCHAR(255),
+	Functionality VARCHAR(255),
+	PRIMARY KEY (Cat_weaponID),
+	CONSTRAINT FK_cat_weapon FOREIGN KEY (Cat_weaponID)
+	REFERENCES Technology(TechnologyID)
+);
+
+CREATE TABLE Tool(
+	Cat_toolID VARCHAR(255),
+	Functionality VARCHAR(255),
+	PRIMARY KEY (Cat_toolID),
+	CONSTRAINT FK_cat_tool FOREIGN KEY (Cat_toolID)
+	REFERENCES Technology(TechnologyID)
+);
