@@ -7,7 +7,7 @@ INSERT INTO Technology (TechnologyID, Tools, Material)
 VALUES ('tn02', 'Flakes', 'stone');
 
 INSERT INTO Technology (TechnologyID, Tools, Material)
-VALUES ('tn03', 'Cleaver', 'stone');
+VALUES ('tn03', 'Cleaver', 'stone'); 
 
 
 --Mesolitik
@@ -24,10 +24,10 @@ VALUES ('tn06', 'Burins', 'flint');
 --Neolitik
 
 INSERT INTO Technology (TechnologyID, Tools, Material)
-VALUES ('tn07', 'Pottery', 'clay');
+VALUES ('tn07', 'Pottery', 'clay'); --bronze age --homo sapien
 
 INSERT INTO Technology (TechnologyID, Tools, Material)
-VALUES ('tn08', 'Adzes', 'stone');
+VALUES ('tn08', 'Adzes', 'stone'); --bronze age -- homo sapien
 
 --metal age
 
