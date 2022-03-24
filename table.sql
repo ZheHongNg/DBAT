@@ -10,7 +10,10 @@ CREATE TABLE Time_Period(
 CREATE TABLE Technology(
 	TechnologyID VARCHAR(255) PRIMARY KEY NOT NULL,
 	Tools VARCHAR(255),
-	Material VARCHAR(255)
+	Material VARCHAR(255),
+	TimeID VARCHAR(255),
+	CONSTRAINT FK_InventedTime FOREIGN KEY (TimeID)
+	REFERENCES Time_Period (TimeID)
 );
 
 CREATE TABLE Local_Area (
@@ -32,16 +35,6 @@ CREATE TABLE Human_Type(
 	TimeID VARCHAR(255),
 	CONSTRAINT FK_Time FOREIGN KEY (TimeID)
 	REFERENCES Time_Period(TimeID)
-);
-
-CREATE TABLE Invented_In(
-	InventedTimeID VARCHAR(255),
-	InventedTechnologyID VARCHAR(255),
-	CONSTRAINT PK_Invented_In PRIMARY KEY (InventedTimeID,InventedTechnologyID),
-	CONSTRAINT FK_InventedTime FOREIGN KEY (InventedTimeID)
-	REFERENCES Time_Period (TimeID),
-	CONSTRAINT FK_InventedTechnology FOREIGN KEY (InventedTechnologyID)
-	REFERENCES Technology(TechnologyID)
 );
 
 CREATE TABLE Used_Technology(
