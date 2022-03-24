@@ -37,6 +37,7 @@ CREATE TABLE Human_Type(
 CREATE TABLE Invented_In(
 	InventedTimeID VARCHAR(255),
 	InventedTechnologyID VARCHAR(255),
+	CONSTRAINT PK_Invented_In PRIMARY KEY (InventedTimeID,InventedTechnologyID),
 	CONSTRAINT FK_InventedTime FOREIGN KEY (InventedTimeID)
 	REFERENCES Time_Period (TimeID),
 	CONSTRAINT FK_InventedTechnology FOREIGN KEY (InventedTechnologyID)
@@ -46,6 +47,7 @@ CREATE TABLE Invented_In(
 CREATE TABLE Used_Technology(
 	UsedTechnologyID VARCHAR(255),
 	Human_UsedID VARCHAR(255),
+	CONSTRAINT PK_Used_Technology PRIMARY KEY (UsedTechnologyID,Human_UsedID),
 	CONSTRAINT FK_UsedTechnology FOREIGN KEY (UsedTechnologyID)
 	REFERENCES Technology(TechnologyID),
 	CONSTRAINT FK_Human_Used FOREIGN KEY (Human_UsedID)
@@ -55,6 +57,7 @@ CREATE TABLE Used_Technology(
 CREATE TABLE Area_Has_Time(
 	A_TimeID VARCHAR(255),
 	Area_HTID VARCHAR(255),
+	CONSTRAINT PK_Area_Has_Time PRIMARY KEY (A_TimeID,Area_HTID),
 	CONSTRAINT FK_A_Time FOREIGN KEY (A_TimeID)
 	REFERENCES Time_Period (TimeID),
 	CONSTRAINT FK_Area_HT FOREIGN KEY (Area_HTID)
@@ -64,6 +67,7 @@ CREATE TABLE Area_Has_Time(
 CREATE TABLE Existed_In(
 	Exist_TimeID VARCHAR(255),
 	Human_ExistID VARCHAR(255),
+	CONSTRAINT PK_Existed_In PRIMARY KEY (Exist_TimeID,Human_ExistID),
 	CONSTRAINT FK_ExistTime FOREIGN KEY (Exist_TimeID)
 	REFERENCES Time_Period (TimeID),
 	CONSTRAINT FK_Human_Exist FOREIGN KEY (Human_ExistID)
@@ -73,8 +77,11 @@ CREATE TABLE Existed_In(
 CREATE TABLE Human_live(
 	human_livingID VARCHAR(255),
 	living_placeID VARCHAR(255),
+	CONSTRAINT PK_Human_live PRIMARY KEY (human_livingID,living_placeID),
 	CONSTRAINT FK_human_live FOREIGN KEY (human_livingID)
 	REFERENCES Human_Type (Human_TypeID),
 	CONSTRAINT FK_living_place FOREIGN KEY (living_placeID)
 	REFERENCES Small_Local_Area(S_L_AreaID)
 );
+
+CREATE TABLE
