@@ -22,7 +22,7 @@ INSERT INTO Small_Local_Area (S_L_AreaID, L_AreaID, Human_TypeID, District_Name)
 VALUES ('sla06', 'la01', 'ht02', 'Gua Madai');
 
 INSERT INTO Small_Local_Area (S_L_AreaID, L_AreaID, Human_TypeID, District_Name)
-VALUES ('sla07', 'la05', 'ht02', Gua Cha');
+VALUES ('sla07', 'la05', 'ht02', 'Gua Cha');
 
 INSERT INTO Small_Local_Area (S_L_AreaID, L_AreaID, Human_TypeID, District_Name)
 VALUES ('sla08', 'la06', 'ht02', 'Bukit Tegun Lembu');
