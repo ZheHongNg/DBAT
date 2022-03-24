@@ -21,8 +21,8 @@ CREATE TABLE Local_Area (
 CREATE TABLE Small_Local_Area (
 	S_L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
 	L_AreaID VARCHAR(255),
-	District_Name VARCHAR(255),
 	Human_TypeID VARCHAR(255),
+	District_Name VARCHAR(255),
 	CONSTRAINT FK_human_live FOREIGN KEY (Human_TypeID)
 	REFERENCES Human_Type (Human_TypeID),
 	CONSTRAINT FK_L_Area FOREIGN KEY (L_AreaID)
