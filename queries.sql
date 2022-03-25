@@ -1,8 +1,8 @@
 B1
-SELECT local_area.State_Name, District_name, Human_Type_Name
+SELECT local_area.State_Name AS State, District_name AS Location, Human_Type_Name AS Human Species
 FROM small_local_area
-join local_area on small_local_area.L_AreaID = local_area.L_AreaID
-join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
+JOIN local_area ON small_local_area.L_AreaID = local_area.L_AreaID
+JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID;
 
 B2
 
