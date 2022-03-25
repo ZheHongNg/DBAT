@@ -5,6 +5,11 @@ JOIN local_area ON small_local_area.L_AreaID = local_area.L_AreaID
 JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID;
 
 B2
+SELECT District_name AS Location, Human_Type.Human_Type_Name AS Human_Species, time_period.YearStart AS Year_Start
+FROM small_local_area
+JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID
+JOIN Time_Period ON Human_Type.TimeID = Time_Period.TimeID
+ORDER BY time_period.YearStart;
 
 B3
 SELECT DISTINCT local_area.State_Name AS State, COUNT(used_technology.UsedTechnologyID) AS Technology_Used, time_period.PeriodName AS Age
