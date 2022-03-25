@@ -16,6 +16,6 @@ join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
 join time_period on Human_Type.TimeID = time_period.TimeID
 join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
 GROUP BY State, Age
-HAVING Technology_Used>0;
+HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
