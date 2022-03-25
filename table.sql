@@ -4,7 +4,8 @@ CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	PeriodName VARCHAR(255),
 	YearStart int,
-	YearEnd int
+	YearEnd int,
+	Duration int
 );
 
 CREATE TABLE Technology(
