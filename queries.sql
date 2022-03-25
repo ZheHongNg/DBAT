@@ -5,7 +5,7 @@ B2
 B3
 SELECT small_local_area.District_name, time_period.PeriodName, 
 
-SELECT local_area.State_Name, COUNT(used_technology.UsedTechnologyID)
+SELECT DISTINCT local_area.State_Name, time_period.PeriodName, COUNT(used_technology.UsedTechnologyID)
 FROM small_local_area
 join local_area on small_local_area.L_AreaID = local_area.L_AreaID
 join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
