@@ -47,18 +47,18 @@ CREATE TABLE Used_Technology(
 	REFERENCES Human_Type(Human_TypeID)
 );
 
-CREATE TABLE Weapon(
-	Cat_weaponID VARCHAR(255),
-	Functionality VARCHAR(255),
-	PRIMARY KEY (Cat_weaponID),
-	CONSTRAINT FK_cat_weapon FOREIGN KEY (Cat_weaponID)
-	REFERENCES Technology(TechnologyID)
+CREATE TABLE StoneAge(
+	Cat_StoneID VARCHAR(255),
+	Description VARCHAR(255),
+	PRIMARY KEY (Cat_StoneID),
+	CONSTRAINT FK_Cat_Stone FOREIGN KEY (Cat_StoneID)
+	REFERENCES Time_Period(TimeID)
 );
 
-CREATE TABLE Tool(
-	Cat_toolID VARCHAR(255),
-	Functionality VARCHAR(255),
-	PRIMARY KEY (Cat_toolID),
-	CONSTRAINT FK_cat_tool FOREIGN KEY (Cat_toolID)
-	REFERENCES Technology(TechnologyID)
+CREATE TABLE MetalAge(
+	Cat_MetalID VARCHAR(255),
+	Description VARCHAR(255),
+	PRIMARY KEY (Cat_MetalID),
+	CONSTRAINT FK_Cat_Metal FOREIGN KEY (Cat_MetalID)
+	REFERENCES Time_Period(TimeID)
 );
