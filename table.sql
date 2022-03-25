@@ -11,7 +11,7 @@ CREATE TABLE Time_Period(
 CREATE TABLE Technology(
 	TechnologyID VARCHAR(255) PRIMARY KEY NOT NULL,
 	Tools VARCHAR(255),
-	Material VARCHAR(255),
+	Material VARCHAR(255)
 );
 
 CREATE TABLE Local_Area (
