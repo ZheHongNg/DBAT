@@ -30,6 +30,7 @@ CREATE TABLE Small_Local_Area (
 	REFERENCES Local_Area(L_AreaID)
 );
 
+
 CREATE TABLE Human_Type(
 	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	Human_Type_Name VARCHAR(255),
