@@ -30,7 +30,7 @@ AND Technology.TechnologyID = used_technology.UsedTechnologyID)
 FROM local_area
 GROUP BY local_area.State_Name;
 
-SELECT  Time_Period.PeriodName
+SELECT DISTINCT Time_Period.PeriodName, Technology.Tools
 FROM Human_Type, Time_Period, used_technology, Technology
 WHERE Human_Type.TimeID = Time_Period.TimeID
 AND Technology.TechnologyID = used_technology.UsedTechnologyID;
