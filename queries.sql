@@ -30,8 +30,7 @@ AND Technology.TechnologyID = used_technology.UsedTechnologyID)
 FROM local_area
 GROUP BY local_area.State_Name;
 
-SELECT Time_Period.PeriodName
-FROM Time_Period, Human_Type
-WHERE Human_Type.TimeID = Time_Period.TimeID;
+SELECT PeriodName
+FROM Time_Period;
 
 
