@@ -23,7 +23,8 @@ HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
 SELECT COUNT(local_area.State_Name) AS State_number, 
-(SELECT *
+(
+SELECT DISTINCT Time_Period.PeriodName, Technology.Tools
 FROM Human_Type, Time_Period, used_technology, Technology
 WHERE Human_Type.TimeID = Time_Period.TimeID
 AND Technology.TechnologyID = used_technology.UsedTechnologyID)
