@@ -33,7 +33,7 @@ GROUP BY technology.Tools) AS B_summary;
 SELECT technology.Tools AS Tech_Name,
 (SELECT COUNT(DISTINCT local_area.L_AreaID)
 FROM small_local_area
-WHERE small_local_area.Human_TypeID = used_technology.Human_TypeID) AS count_LocalArea,
+WHERE small_local_area.Human_TypeID = used_technology.Human_UsedID) AS count_LocalArea,
 (SELECT Time_Period.PeriodName 
 FROM Time_Period, Human_Type
 WHERE Human_Type.TimeID = Time_Period.TimeID 
