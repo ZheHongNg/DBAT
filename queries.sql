@@ -30,7 +30,7 @@ join time_period on Human_Type.TimeID = time_period.TimeID
 join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
 join technology on technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY technology.Tools, time_period.PeriodName)
-ORDER BY time_period.PeriodName;
+ORDER BY Age;
 
 SELECT technology.Tools AS Tech_Name,
 (SELECT COUNT(DISTINCT L_AreaID)
