@@ -23,11 +23,10 @@ HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
 SELECT ToolsName, count_LocalArea, AgeName
-FROM (SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, Time_Period.PeriodName AS AgeName, Technology.Tools AS ToolsName
-FROM Human_Type, Time_Period, used_technology, Technology, local_area
-WHERE Human_Type.TimeID = Time_Period.TimeID
-AND Technology.TechnologyID = used_technology.UsedTechnologyID
-GROUP BY Technology.Tools, Time_Period.PeriodName)
+FROM (SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, Technology.Tools AS ToolsName
+FROM used_technology, Technology, local_area
+WHERE Technology.TechnologyID = used_technology.UsedTechnologyID
+GROUP BY Technology.Tools)
 ORDER BY count_LocalArea;
 
 
