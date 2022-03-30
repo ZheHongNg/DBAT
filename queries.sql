@@ -38,6 +38,7 @@ WHERE small_local_area.Human_TypeID = used_technology.Human_UsedID) AS count_Loc
 FROM Time_Period, Human_Type
 WHERE Human_Type.TimeID = Time_Period.TimeID) AS Age
 FROM technology, used_technology
-WHERE technology.TechnologyID = used_technology.UsedTechnologyID;
+WHERE technology.TechnologyID = used_technology.UsedTechnologyID
+GROUP BY technology.Tools;
 
 
