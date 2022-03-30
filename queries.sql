@@ -22,7 +22,7 @@ GROUP BY local_area.State_Name, time_period.PeriodName
 HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
-SELECT ToolsName, count_LocalArea, AgeName
+SELECT ToolsName, count_LocalArea
 FROM (SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, Technology.Tools AS ToolsName
 FROM used_technology, Technology, local_area
 WHERE Technology.TechnologyID = used_technology.UsedTechnologyID
