@@ -29,7 +29,7 @@ join local_area on small_local_area.L_AreaID = local_area.L_AreaID
 join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
 join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
 join technology on technology.TechnologyID = used_technology.UsedTechnologyID
-GROUP BY Tech_Name)
+GROUP BY technology.Tools)
 ORDER BY count_LocalArea;
 
 
