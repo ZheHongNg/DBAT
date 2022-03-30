@@ -24,8 +24,7 @@ HAVING COUNT(used_technology.UsedTechnologyID)>0;
 B4
 SELECT Tech_Name, count_LocalArea, 
 (select Time_Period.PeriodName 
-from Time_Period, Human_Type  where Human_Type.TimeID = Time_Period.TimeID 
-and Human_Type.Human_TypeID = small_local_area.Human_TypeID ) as PeriodName
+from Time_Period, Human_Type  where Human_Type.TimeID = Time_Period.TimeID) as PeriodName
 FROM (SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, technology.Tools AS Tech_Name
 FROM small_local_area
 join local_area on small_local_area.L_AreaID = local_area.L_AreaID
