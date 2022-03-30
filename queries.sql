@@ -39,7 +39,7 @@ FROM Time_Period, Human_Type
 WHERE Human_Type.TimeID = Time_Period.TimeID) AS Age
 FROM technology, used_technology
 WHERE technology.TechnologyID = used_technology.UsedTechnologyID
-GROUP BY technology.Tools;
+GROUP BY technology.Tools, Age;
 
 
 
