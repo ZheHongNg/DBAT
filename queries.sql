@@ -27,7 +27,7 @@ FROM (SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, Time_Peri
 FROM Human_Type, Time_Period, used_technology, Technology
 WHERE Human_Type.TimeID = Time_Period.TimeID
 AND Technology.TechnologyID = used_technology.UsedTechnologyID
-GROUP BY local_area.State_Name) AS tech_area_summary
+GROUP BY local_area.State_Name)
 ORDER BY count_LocalArea;
 
 
