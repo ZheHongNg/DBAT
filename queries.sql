@@ -28,7 +28,8 @@ FROM Human_Type, Time_Period, used_technology, Technology
 WHERE Human_Type.TimeID = Time_Period.TimeID
 AND Technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY local_area.State_Name)
-AS tech_area_summary;
+AS tech_area_summary
+ORDER BY count_LocalArea;
 
 
 SELECT DISTINCT COUNT(local_area.State_Name) AS State_number, Technology.Tools, time_period.PeriodName AS Age
