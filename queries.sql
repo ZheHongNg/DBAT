@@ -36,8 +36,7 @@ FROM small_local_area
 WHERE small_local_area.Human_TypeID = used_technology.Human_UsedID) AS count_LocalArea,
 (SELECT Time_Period.PeriodName 
 FROM Time_Period, Human_Type
-WHERE Human_Type.TimeID = Time_Period.TimeID 
-AND Human_Type.Human_TypeID = small_local_area.Human_TypeID ) AS Age
+WHERE Human_Type.TimeID = Time_Period.TimeID) AS Age
 FROM technology, used_technology
 WHERE technology.TechnologyID = used_technology.UsedTechnologyID;
 
