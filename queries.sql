@@ -42,3 +42,4 @@ WHERE technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY technology.Tools;
 
 
+
