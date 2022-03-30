@@ -30,12 +30,15 @@ join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
 join technology on technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY technology.Tools) AS B_summary;
 
-SELECT COUNT(DISTINCT local_area.State_Name) AS count_LocalArea, technology.Tools AS Tech_Name
+SELECT technology.Tools AS Tech_Name,
+(SELECT COUNT(DISTINCT local_area.L_AreaID)
 FROM small_local_area
-join local_area on small_local_area.L_AreaID = local_area.L_AreaID
-join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
-join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
-join technology on technology.TechnologyID = used_technology.Used_TechnologyID
-GROUP BY local_area.State_Name
+WHERE small_local_area.Human_TypeID = used_technology.Human_TypeID) AS count_LocalArea,
+(SELECT Time_Period.PeriodName 
+FROM Time_Period, Human_Type
+WHERE Human_Type.TimeID = Time_Period.TimeID 
+AND Human_Type.Human_TypeID = small_local_area.Human_TypeID ) AS Age
+FROM technology
+WHERE technology.TechnologyID = used_technology.UsedTechnologyID;
 
 
