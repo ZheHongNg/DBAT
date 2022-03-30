@@ -31,7 +31,7 @@ join technology on technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY technology.Tools) AS B_summary;
 
 SELECT technology.Tools AS Tech_Name,
-(SELECT COUNT(DISTINCT local_area.L_AreaID)
+(SELECT COUNT(DISTINCT L_AreaID)
 FROM small_local_area
 WHERE small_local_area.Human_TypeID = used_technology.Human_UsedID) AS count_LocalArea,
 (SELECT Time_Period.PeriodName 
