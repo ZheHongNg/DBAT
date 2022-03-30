@@ -12,7 +12,7 @@ JOIN Time_Period ON Human_Type.TimeID = Time_Period.TimeID
 ORDER BY time_period.PeriodName;
 
 B3
-SELECT DISTINCT local_area.State_Name AS State, COUNT(used_technology.UsedTechnologyID) AS Technology_Used, time_period.PeriodName AS Age
+SELECT local_area.State_Name AS State, COUNT(DISTINCT used_technology.UsedTechnologyID) AS Technology_Used, time_period.PeriodName AS Age
 FROM small_local_area
 join local_area on small_local_area.L_AreaID = local_area.L_AreaID
 join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
