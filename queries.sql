@@ -22,13 +22,13 @@ GROUP BY local_area.State_Name, time_period.PeriodName
 HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
-SELECT B_summary.Tech_Name, B_summary.count_LocalArea
+SELECT Tech_Name, count_LocalArea
 FROM (SELECT COUNT(DISTINCT local_area.L_AreaID) AS count_LocalArea, technology.Tools AS Tech_Name
 FROM small_local_area
 join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
 join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
 join technology on technology.TechnologyID = used_technology.UsedTechnologyID
-GROUP BY technology.Tools) AS B_summary;
+GROUP BY technology.Tools);
 
 SELECT technology.Tools AS Tech_Name,
 (SELECT COUNT(DISTINCT L_AreaID)
