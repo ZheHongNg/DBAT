@@ -1,4 +1,11 @@
-CREATE DATABASE DBATDB;
+DROP TABLE Time_Period;
+DROP TABLE Technology;
+DROP TABLE Local_Area;
+DROP TABLE Human_Type;
+DROP TABLE Small_Local_Area;
+DROP TABLE Used_Technology;
+DROP TABLE StoneAge;
+DROP TABLE MetalAge;
 
 CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
@@ -19,6 +26,14 @@ CREATE TABLE Local_Area (
 	State_Name VARCHAR(255)
 );
 
+CREATE TABLE Human_Type(
+	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
+	Human_Type_Name VARCHAR(255),
+	TimeID VARCHAR(255),
+	CONSTRAINT FK_Time FOREIGN KEY (TimeID)
+	REFERENCES Time_Period(TimeID)
+);
+
 CREATE TABLE Small_Local_Area (
 	S_L_AreaID VARCHAR(255) NOT NULL PRIMARY KEY,
 	L_AreaID VARCHAR(255),
@@ -28,15 +43,6 @@ CREATE TABLE Small_Local_Area (
 	REFERENCES Human_Type (Human_TypeID),
 	CONSTRAINT FK_L_Area FOREIGN KEY (L_AreaID)
 	REFERENCES Local_Area(L_AreaID)
-);
-
-
-CREATE TABLE Human_Type(
-	Human_TypeID VARCHAR(255) PRIMARY KEY NOT NULL,
-	Human_Type_Name VARCHAR(255),
-	TimeID VARCHAR(255),
-	CONSTRAINT FK_Time FOREIGN KEY (TimeID)
-	REFERENCES Time_Period(TimeID)
 );
 
 CREATE TABLE Used_Technology(
