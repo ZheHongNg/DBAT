@@ -5,29 +5,29 @@ JOIN local_area ON small_local_area.L_AreaID = local_area.L_AreaID
 JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID;
 
 B2
-SELECT District_name AS Location, Human_Type.Human_Type_Name AS Human_Species, time_period.PeriodName AS Age
+SELECT District_name AS Location, Human_Type.Human_Type_Name AS Human_Species, time_period.PeriodName AS Ages
 FROM small_local_area
 JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID
 JOIN Time_Period ON Human_Type.TimeID = Time_Period.TimeID
 ORDER BY time_period.PeriodName;
 
 B3
-SELECT local_area.State_Name AS State, COUNT(DISTINCT used_technology.UsedTechnologyID) AS Technology_Used, time_period.PeriodName AS Age
+SELECT local_area.State_Name AS State, time_period.PeriodName AS Ages, COUNT(DISTINCT used_technology.UsedTechnologyID) AS Amount_Technology_Used
 FROM small_local_area
-join local_area on small_local_area.L_AreaID = local_area.L_AreaID
-join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
-join time_period on Human_Type.TimeID = time_period.TimeID
-join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
+JOIN local_area ON small_local_area.L_AreaID = local_area.L_AreaID
+JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID
+JOIN time_period ON Human_Type.TimeID = time_period.TimeID
+JOIN used_technology ON human_type.Human_TypeID = used_technology.Human_UsedID
 GROUP BY local_area.State_Name, time_period.PeriodName
 HAVING COUNT(used_technology.UsedTechnologyID)>0;
 
 B4
-SELECT Tech_Name, count_LocalArea, Age
-FROM (SELECT COUNT(DISTINCT L_AreaID) AS count_LocalArea, technology.Tools AS Tech_Name, time_period.PeriodName AS Age
+SELECT Technology_Name, Ages, Number_of_state
+FROM (SELECT COUNT(DISTINCT L_AreaID) AS Number_of_state, technology.Tools AS Technology_Name, time_period.PeriodName AS Ages
 FROM small_local_area
-join Human_Type on small_local_area.Human_TypeID = Human_Type.Human_TypeID
-join time_period on Human_Type.TimeID = time_period.TimeID
-join used_technology on human_type.Human_TypeID = used_technology.Human_UsedID
-join technology on technology.TechnologyID = used_technology.UsedTechnologyID
+JOIN Human_Type ON small_local_area.Human_TypeID = Human_Type.Human_TypeID
+JOIN time_period ON Human_Type.TimeID = time_period.TimeID
+JOIN used_technology ON human_type.Human_TypeID = used_technology.Human_UsedID
+JOIN technology ON technology.TechnologyID = used_technology.UsedTechnologyID
 GROUP BY technology.Tools, time_period.PeriodName)
-ORDER BY Age;
+ORDER BY Ages;
