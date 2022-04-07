@@ -10,9 +10,9 @@ DROP TABLE MetalAge;
 CREATE TABLE Time_Period(
 	TimeID VARCHAR(255) PRIMARY KEY NOT NULL,
 	PeriodName VARCHAR(255),
-	YearStart int,
-	YearEnd int,
-	Duration int
+	YearStart NUMBER(38),
+	YearEnd NUMBER(38),
+	Duration NUMBER(38)
 );
 
 CREATE TABLE Technology(
