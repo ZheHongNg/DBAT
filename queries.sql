@@ -2,7 +2,7 @@ B1
 
 column State format a20
 column Location format a20
-column Human_Type_Name format a20
+column Human_Species format a20
 
 SELECT local_area.State_Name AS State, District_name AS Location, Human_Type_Name AS Human_Species
 FROM small_local_area
